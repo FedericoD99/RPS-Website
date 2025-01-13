@@ -25,24 +25,25 @@
         </header>
         <main>
             <h1>Rock, Paper, Scissors Website</h1>
-            <div class="com">Computer</div>
-            <div class="you">You</div>
+            <div class="com">Computer:</div>
+            <div class="you">You:</div>
             <div class="images">
                 
-                <button type="submit">
-                    <img src="the rock.webp" alt="" border="0" width="50px" />
+                <button type="submit" onclick="playGame('rock')">
+                    <img src="the rock.webp" alt="" border="0" width="100px" />
                   </button>
 
-                  <button type="submit">
-                    <img src="paper.jpg" alt="buttonpng" border="0" width="50px" />
+                  <button type="submit" onclick="playGame('paper')">
+                    <img src="paper.jpg" alt="" border="0" width="100px" />
                   </button>
 
-                  <button type="submit">
-                    <img src="scissors.webp" alt="buttonpng" border="0" width="50px"/>
+                  <button type="submit" onclick="playGame('scissors')">
+                    <img src="scissors.webp" alt="" border="0" width="100px"/>
                   </button>
                 
                 
             <br>
+            <p>Wins</p>
             <p>Opponent:</p>
             <p>You:</p>
         </div>
@@ -62,5 +63,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="script.js"></script>
     </body>
 </html>
