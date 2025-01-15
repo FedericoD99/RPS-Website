@@ -1,9 +1,4 @@
 
-document.getElementById('rockButton').addEventListener('click'), () => {
-  let userChoice = 'rock';  // User has selected rock
-  document.getElementById('userChoiceDisplay') = `You chose: ${userChoice}`;
-  playGame(userChoice);
-}
 
 
 
@@ -61,6 +56,8 @@ const getUserChoice = (userInput) => {
   
     console.log(`User chose: ${userChoice}`);
     console.log(`Computer chose: ${computerChoice}`);
+    document.getElementById('choose').innerText = `Computer has selected: ${computerChoice}`;
+    document.getElementById('chose').innerText = `User has selected: ${userChoice}`;
   
     
     const result = determineWinner(userChoice, computerChoice);
