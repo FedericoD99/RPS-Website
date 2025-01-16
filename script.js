@@ -1,5 +1,9 @@
-
-
+let userName = "";
+let userWins = 0;
+let computerWins = 0;
+let roundsPlayed = 0;
+userScore = 0
+computerScore = 0
 
 
 const getUserChoice = (userInput) => {
@@ -35,17 +39,27 @@ const getUserChoice = (userInput) => {
   
     
     if (userChoice === 'rock') {
+      userScore++
+      document.getElementById('userScore').innerText =`You: ${userScore}`;
       return computerChoice === 'paper' ? "Computer wins!" : "You win!";
     }
   
     if (userChoice === 'paper') {
+      userScore++
+      document.getElementById('userScore').innerText =`You: ${userScore}`;
       return computerChoice === 'scissors' ? "Computer wins!" : "You win!";
+      
     }
   
     
     if (userChoice === 'scissors') {
+      userScore++
+      document.getElementById('userScore').innerText =`You: ${userScore}`;
       return computerChoice === 'rock' ? "Computer wins!" : "You win!";
     }
+
+    
+
   };
   
   
@@ -63,6 +77,12 @@ const getUserChoice = (userInput) => {
     const result = determineWinner(userChoice, computerChoice);
     console.log(result);
   };
+
+  
+
+
+
+  
   
   
   
