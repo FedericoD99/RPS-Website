@@ -4,6 +4,7 @@ let computerWins = 0;
 let roundsPlayed = 0;
 let userScore = 0;
 let computerScore = 0;
+let roundCount = 1;
 
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
@@ -35,9 +36,11 @@ const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === 'rock') {
         if (computerChoice === 'paper') {
             computerScore++;
+            document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
             return "Computer wins!";
         } else {
             userScore++;
+            document.getElementById('userScore').innerText = `You: ${userScore}`;
             return "You win!";
         }
     }
@@ -45,9 +48,11 @@ const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === 'paper') {
         if (computerChoice === 'scissors') {
             computerScore++;
+            document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
             return "Computer wins!";
         } else {
             userScore++;
+            document.getElementById('userScore').innerText = `You: ${userScore}`;
             return "You win!";
         }
     }
@@ -55,9 +60,11 @@ const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === 'scissors') {
         if (computerChoice === 'rock') {
             computerScore++;
+            document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
             return "Computer wins!";
         } else {
             userScore++;
+            document.getElementById('userScore').innerText = `You: ${userScore}`;
             return "You win!";
         }
     }
@@ -73,16 +80,11 @@ function resetGame() {
     document.getElementById('choose').innerText = `Waiting...`;
     document.getElementById('chose').innerText = `Go`;
     document.getElementById('result').innerText = "";
-    document.getElementById('roundCounter').innerText = "Round: 0/3";
-    document.getElementById('resetButton').style.display = 'none'; 
+    document.getElementById('resetButton') = 'none'; 
 }
 
 // Play the game
 function playGame(userChoice) {
-    if (roundsPlayed >= 3) {
-        document.getElementById('result').innerText = "Game is over! Reset to play again.";
-        return;
-    }
 
     const computerChoice = getComputerChoice();
 
@@ -94,25 +96,15 @@ function playGame(userChoice) {
     const result = determineWinner(userChoice, computerChoice);
     console.log(result);
 
-    document.getElementById('result').innerText = result;
-
-    roundsPlayed++;
-    document.getElementById('roundCounter').innerText = `Round: ${roundsPlayed}/3`;
-
-    if (roundsPlayed === 3) {
-        if (userScore > computerScore) {
-            document.getElementById('result').innerText = "You win the game!";
-        } else if (computerScore > userScore) {
-            document.getElementById('result').innerText = "Computer wins the game!";
-        } else {
-            document.getElementById('result').innerText = "It's a tie!";
-        }
-
-        document.getElementById('resetButton').style.display = 'block';  
+   
+    if (userScore === 3) {
+        document.getElementById('result').innerText = "You win the game!";
+        document.getElementById('resetButton').innerText = '';  
+    } else if (computerScore === 3) {
+        document.getElementById('result').innerText = "Computer wins the game!";
+        document.getElementById('resetButton').innerText = '';  
     }
-
-    document.getElementById('userScore').innerText = `You: ${userScore}`;
-    document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
 }
+
 
 document.getElementById('resetButton').addEventListener('click', resetGame);
