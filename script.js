@@ -1,10 +1,14 @@
-let userName = "";
 let userWins = 0;
 let computerWins = 0;
 let roundsPlayed = 0;
 let userScore = 0;
 let computerScore = 0;
 let roundCount = 1;
+
+
+
+
+
 
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
@@ -95,6 +99,8 @@ function playGame(userChoice) {
 
     const result = determineWinner(userChoice, computerChoice);
     console.log(result);
+
+    responseText.innerText = result;
 
    
     if (userScore === 3) {
