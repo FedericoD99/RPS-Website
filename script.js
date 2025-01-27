@@ -1,9 +1,13 @@
-let userName = "";
 let userWins = 0;
 let computerWins = 0;
 let roundsPlayed = 0;
 let userScore = 0;
 let computerScore = 0;
+
+
+
+
+
 
 const getUserChoice = (userInput) => {
     userInput = userInput.toLowerCase();
@@ -77,13 +81,15 @@ function resetGame() {
     document.getElementById('userScore').innerText = `You: ${userScore}`;
     document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
     document.getElementById('choose').innerText = `Waiting...`;
-    document.getElementById('chose').innerText = `G`;
+    document.getElementById('chose').innerText = `Go`;
     document.getElementById('result').innerText = "";
-    document.getElementById('resetButton').style.display = 'none'; 
+    document.getElementById('resetButton') = 'none'; 
 }
 
 // Play the game
 function playGame(userChoice) {
+
+    checkIfGameOver();
     const computerChoice = getComputerChoice();
 
     console.log(`User chose: ${userChoice}`);
@@ -94,6 +100,8 @@ function playGame(userChoice) {
     const result = determineWinner(userChoice, computerChoice);
     console.log(result);
 
+    responseText.innerText = result;
+
    
     if (userScore === 3) {
         document.getElementById('result').innerText = "You win the game!";
@@ -103,6 +111,28 @@ function playGame(userChoice) {
         document.getElementById('resetButton').innerText = '';  
     }
 }
+
+
+
+function checkIfGameOver() {
+
+    if (userScore === 5) {
+      prompt('You win (click enter)')
+      userScore = 0;
+  
+      computerScore = 0;
+      document.getElementById('computerScore').innerText = computerScore
+      document.getElementById('userScore').innerText = userScore
+  
+    } else if (computerScore === 5) {
+      prompt('AI wins (click enter)')
+      userScore = 0
+      computerScore = 0
+      document.getElementById('computerScore').innerText = computerScore
+      document.getElementById('userScore').innerText = userScore
+    }
+  
+  }
 
 
 document.getElementById('resetButton').addEventListener('click', resetGame);
