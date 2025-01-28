@@ -3,6 +3,7 @@ let computerWins = 0;
 let roundsPlayed = 0;
 let userScore = 0;
 let computerScore = 0;
+let roundCount = 1;
 
 
 
