@@ -81,7 +81,7 @@ function resetGame() {
     document.getElementById('userScore').innerText = `You: ${userScore}`;
     document.getElementById('computerScore').innerText = `Computer: ${computerScore}`;
     document.getElementById('choose').innerText = `Waiting...`;
-    document.getElementById('chose').innerText = `Go`;
+    document.getElementById('chose').innerText = `Input shows here`;
     document.getElementById('result').innerText = "";
     document.getElementById('resetButton') = 'none'; 
 }

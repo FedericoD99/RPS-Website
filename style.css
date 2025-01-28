@@ -1,5 +1,7 @@
 h1 {
     margin-left: 36%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 50px;
 }
 
 div.com{
@@ -10,7 +12,8 @@ div.com{
     width: 500px;
     font-size: xx-large;
     margin-bottom: 50px;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-width: thick;
 }
 
 div.you{
@@ -24,24 +27,28 @@ div.you{
     margin-bottom: 50px;
     position: relative;
     top: 150;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-width: thick;
 
 }
 
 div.images{
     margin-right: 900;
     margin-top: 150px;
-    border-style: groove;
+    border-style: solid;
     text-align: center;
-    border-left: 0px;
+    border-left: 50px;
     border-left-width: 100px;
     border-radius: 0px;
     width: 400px;
     margin-left: 800px;
-    height: 200px;
+    height: 300px;
+    border-width: thick;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body{
-    background-color: lightcyan;
+    background-color: powderblue;
 }
 
 div {
