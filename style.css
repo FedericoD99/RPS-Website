@@ -1,30 +1,32 @@
 h1 {
-    margin-left: 36%;
+    margin-left: 34%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 50px;
+    font-size: 50px;
 }
 
 div.com{
-    margin-left: 1200px;
-    margin-top: 250px;
+   
+  
     border-style: groove;
     text-align: center;
     width: 500px;
+    margin-top: 150px;
     font-size: xx-large;
-    margin-bottom: 50px;
+    float: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-width: thick;
 }
 
 div.you{
-    margin-right: 120px;
-    margin-top: -94px;
+   
+   
     border-style:groove;
     text-align: center;
     width: 400px;
-    margin-left: 50px;
+   margin-top: 150px;
     font-size: xx-large;
-    margin-bottom: 50px;
+   float: right;
     position: relative;
     top: 150;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -33,18 +35,19 @@ div.you{
 }
 
 div.images{
-    margin-right: 900;
-    margin-top: 150px;
-    border-style: solid;
+  
+ margin: auto;
+    
     text-align: center;
     border-left: 50px;
     border-left-width: 100px;
     border-radius: 0px;
-    width: 400px;
-    margin-left: 800px;
-    height: 300px;
-    border-width: thick;
+    width: 350px;
+   float: none;
+    height: 200px;
+   
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 400px;
 }
 
 body{
