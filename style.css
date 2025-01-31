@@ -12,10 +12,13 @@ div.com{
     text-align: center;
     width: 500px;
     margin-top: 150px;
-    font-size: xx-large;
+    font-size: 70px;
     float: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-width: thick;
+    margin-left: 20px;
+    
+    
 }
 
 div.you{
@@ -25,12 +28,13 @@ div.you{
     text-align: center;
     width: 400px;
    margin-top: 150px;
-    font-size: xx-large;
+    font-size: 70px;
    float: right;
     position: relative;
     top: 150;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-width: thick;
+    margin-right: 20px;
 
 }
 
